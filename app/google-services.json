@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "981475903759",
+    "project_id": "project--6869870836570256847"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981475903759:android:d85c4e22d3299629",
+        "android_client_info": {
+          "package_name": "com.bich.hp.nhaxe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981475903759-u06092se7a21cpucok6cqif4d7tl61ta.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bich.hp.nhaxe",
+            "certificate_hash": "4E364164EE0A89C78F8734ADE039DCA77499F0F5"
+          }
+        },
+        {
+          "client_id": "981475903759-gc7qaud32q97fcsqvtmt6l2olno9egic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBz4lIxkCRNvcoMzAWRhRCNoAI-OJpcwIg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

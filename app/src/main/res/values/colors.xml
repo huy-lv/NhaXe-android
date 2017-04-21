@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="den">#101010</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bgToolbar">#0bbfe7</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="bgLogo">#f67122</color>
+    <color name="colorGray">#CCC</color>
+    <color name="colorFacebook">#4a6ea9</color>
+    <color name="colorGoogle">#da4835</color>
+    <color name="colorBlack">#bf1c4f</color>
+    <color name="colorRed">#FFF62226</color>
+    <color name="tranparentBlack">#B2000000</color>
+    <color name="colorGreen">#38f734</color>
+    <color name="colorSliderInActive">#8095a1</color>
+    <color name="maunhat">#d1cece</color>
+    <color name="genre">#666666</color>
+    <color name="year">#888888</color>
+    <color name="list_divider">#d9d9d9</color>
+    <color name="list_row_start_color">#ffffff</color>
+    <color name="list_row_end_color">#ffffff</color>
+    <color name="list_row_hover_start_color">#ebeef0</color>
+    <color name="list_row_hover_end_color">#ebeef0</color>
+    <color name="white">#ffffffff</color>
+</resources>

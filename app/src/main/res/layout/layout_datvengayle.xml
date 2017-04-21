@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="20dp"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:background="@drawable/funbus"
+                android:layout_width="match_parent"
+                android:layout_height="113dp" />
+
+            <TextView
+                android:textColor="#f90c0c"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:text="CHẤT LƯỢNG TẠO THÀNH CÔNG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+
+
+            <TextView
+                android:padding="20dp"
+                android:textColor="#f90c0c"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:drawableLeft="@drawable/mt"
+                android:text="  Giới Thiệu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvGThieu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textColor="#f90c0c"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:drawableLeft="@drawable/eye"
+                android:text="  Tầm Nhìn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvTamNHin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:textColor="#f90c0c"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:drawableLeft="@drawable/muctieu"
+                android:text="  Mục Tiêu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvMucTieu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView android:layout_gravity="center"
+                android:padding="30dp"
+                android:background="@drawable/khachhang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="#f90c0c"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="3000 Lượt Khách Mỗi Ngày"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView android:layout_gravity="center"
+                android:padding="30dp"
+                android:background="@drawable/hic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="#f90c0c"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="Hơn 100 tuyến xe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView android:layout_gravity="center"
+                android:padding="30dp"
+                android:background="@drawable/hic1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="#f90c0c"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="Hơn 10 chi nhánh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

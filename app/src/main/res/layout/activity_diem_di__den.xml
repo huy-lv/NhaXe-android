@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_diem_di__den"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.bich.hp.nhaxe.View.TimVe.DiemDi_Den">
+    <EditText android:id="@+id/inputSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tìm Điểm Đi..."
+        android:inputType="textVisiblePassword"/>
+    <ListView
+        android:id="@+id/lvDanhSachDiemDi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NhaXe</string>
+    <string name="facebook_app_id">1999628940264616</string>
+    <string name="please_select_end_point">Vui lòng chọn điểm đến</string>
+    <string name="hint_select_end_date">chọn ngày về</string>
+    <string name="hint_select_end_point">chọn điểm đến</string>
+    <string name="hint_select_start_date">chọn ngày đi</string>
+    <string name="hint_select_start_point">chọn điểm đi</string>
+    <string name="please_select_start_date">Vui lòng chọn ngày đi</string>
+    <string name="please_select_start_point">Vui lòng chọn điểm đi</string>
+    <string name="google_plus_client">981475903759-u06092se7a21cpucok6cqif4d7tl61ta.apps.googleusercontent.com</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+</resources>

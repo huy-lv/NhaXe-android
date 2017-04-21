@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:padding="40dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+
+            android:drawableLeft="@drawable/telephone"
+            android:text=" Gọi Vận Chuyển: 19008193"
+
+            android:textColor="#f10c0c"
+            android:background="@drawable/bg_gray"
+            android:drawableRight="@drawable/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btncallvc" />
+
+        <Button
+            android:text="Bảng Báo Giá"
+            android:drawableLeft="@drawable/gia"
+            android:textColor="#f10c0c"
+            android:background="@drawable/bg_gray"
+            android:drawableRight="@drawable/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBaoGia" />
+        <LinearLayout
+            android:id="@+id/fragment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+        </LinearLayout>
+
+        <Button
+            android:drawableLeft="@drawable/box"
+            android:background="@drawable/bg_gray"
+            android:text="        Cách Đóng Gói Hàng"
+            android:drawableRight="@drawable/next"
+            android:textColor="#f10c0c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btndonggoi" />
+    </LinearLayout>
+</LinearLayout>
