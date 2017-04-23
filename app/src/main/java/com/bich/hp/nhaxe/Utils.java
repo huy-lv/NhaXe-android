@@ -54,4 +54,8 @@ public class Utils {
         pd.setMessage("Loading...");
         pd.show();
     }
+
+    public static void getClearCurrentUser() {
+        user = null;
+    }
 }

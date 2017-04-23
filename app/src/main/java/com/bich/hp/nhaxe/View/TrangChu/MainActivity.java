@@ -158,6 +158,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Utils.showInfoDialog(MainActivity.this,"Dang xuat thanh cong!");
                         modelDangNhap.dangXuat(MainActivity.this);
+                        Utils.getClearCurrentUser();
                         Utils.LOGGEDIN = false;
                         invalidateOptionsMenu();
                         if (accessToken != null) {

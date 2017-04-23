@@ -56,5 +56,9 @@ public class User{
                 ", name='" + name + '\'' +
                 '}';
     }
+
+    public void clear() {
+
+    }
 }
 
