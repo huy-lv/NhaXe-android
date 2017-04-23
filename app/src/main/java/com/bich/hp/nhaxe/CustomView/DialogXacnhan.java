@@ -156,11 +156,11 @@ public class DialogXacnhan extends Dialog {
     void checkDone(){
         if(i1 == Utils.gheDaChon.size()-1 && i2 == i1){
             Log.e("Cxz","done");
-//                    sendSMS(user.getPhone(), "Hoa don dat ve xe: Khach hang: " + user.getName() +
-//                            ",email: " + user.getEmail() +
-//                            ", lo trinh: " + lotrinh.getDiemdi() +
-//                            " -> " + lotrinh.getDiemden() +
-//                            " thanh toan hoa don tai 11/16 Pham Van Dong");
+                    sendSMS(user.getPhone(), "Hoa don dat ve xe: Khach hang: " + user.getName() +
+                            ",email: " + user.getEmail() +
+                            ", lo trinh: " + lotrinh.getDiemdi() +
+                            " -> " + lotrinh.getDiemden() +
+                            " thanh toan hoa don tai 11/16 Pham Van Dong");
             Toast.makeText(c,"Dat ve thanh cong!",Toast.LENGTH_SHORT).show();
             dismiss();
             pd.dismiss();

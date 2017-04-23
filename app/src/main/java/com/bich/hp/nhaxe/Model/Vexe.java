@@ -25,7 +25,7 @@ public class Vexe {
     String giokhoihanh;
     @SerializedName("NGAYKHOIHANH")
     String ngaykhoihanh;
-    @SerializedName("MASOGHE")
+    @SerializedName("MAGHE")
     String maghe;
     @SerializedName("TENGHE")
     String tenghe;

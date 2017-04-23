@@ -1,5 +1,6 @@
 package com.bich.hp.nhaxe.View.TrangChu;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -151,19 +152,29 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 break;
 
             case R.id.itDangXuat:
-                modelDangNhap.dangXuat(this);
-                if (accessToken != null) {
-                    LoginManager.getInstance().logOut();
-                    this.menu.clear();
-                    this.onCreateOptionsMenu(this.menu);
-                }
 
-                if (googleSignInResult != null) {
-                    Auth.GoogleSignInApi.signOut(mGoogleApiClient);
-                    this.menu.clear();
-                    this.onCreateOptionsMenu(this.menu);
+                Utils.showConfirmDialog(this, "Ban co chac chan muon dang xuat khong?", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Utils.showInfoDialog(MainActivity.this,"Dang xuat thanh cong!");
+                        modelDangNhap.dangXuat(MainActivity.this);
+                        Utils.LOGGEDIN = false;
+                        invalidateOptionsMenu();
+                        if (accessToken != null) {
+                            LoginManager.getInstance().logOut();
+                            MainActivity.this.menu.clear();
+                            MainActivity.this.onCreateOptionsMenu(MainActivity.this.menu);
+                        }
 
-                }
+                        if (googleSignInResult != null) {
+                            Auth.GoogleSignInApi.signOut(mGoogleApiClient);
+                            MainActivity.this.menu.clear();
+                            MainActivity.this.onCreateOptionsMenu(MainActivity.this.menu);
+
+                        }
+                    }
+                });
+
 
 //                if (!modelDangNhap.LayCachedDangNhap(this).equals("")) {
 //                    modelDangNhap.CapNhatCachedDangNhap(this, "");
