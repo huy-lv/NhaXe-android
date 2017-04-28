@@ -41,6 +41,7 @@ public class AdapterGhe extends RecyclerView.Adapter<AdapterGhe.GheVH> {
         return new GheVH(LayoutInflater.from(context).inflate(R.layout.item_ghe, null));
     }
 
+    //edit1
     @Override
     public void onBindViewHolder(GheVH holder, final int position) {
         final Ghe g = danhsachGhe.get(position);
