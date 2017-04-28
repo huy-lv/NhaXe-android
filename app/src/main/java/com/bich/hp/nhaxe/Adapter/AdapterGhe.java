@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.bich.hp.nhaxe.CustomView.DialogChonGhe;
 import com.bich.hp.nhaxe.Model.Ghe;
 import com.bich.hp.nhaxe.R;
-import com.bich.hp.nhaxe.Utils;
 
 import java.util.ArrayList;
 
@@ -22,15 +21,14 @@ import butterknife.ButterKnife;
 import static com.bich.hp.nhaxe.Utils.EMPTY;
 import static com.bich.hp.nhaxe.Utils.OWNED;
 import static com.bich.hp.nhaxe.Utils.SELECTED;
-import static com.bich.hp.nhaxe.Utils.gheDaChon;
 
 /**
  * Created by huylv on 12-Apr-17.
  */
 
 public class AdapterGhe extends RecyclerView.Adapter<AdapterGhe.GheVH> {
-    Context context;
     public ArrayList<Ghe> danhsachGhe;
+    Context context;
 
     public AdapterGhe(Context c, ArrayList<Ghe> gheArrayList) {
         danhsachGhe = gheArrayList;
@@ -87,6 +85,12 @@ public class AdapterGhe extends RecyclerView.Adapter<AdapterGhe.GheVH> {
         return danhsachGhe.size();
     }
 
+    public ArrayList<Ghe> getSelectedList() {
+        ArrayList<Ghe> ccc = new ArrayList<>();
+        for (Ghe g : danhsachGhe) if (g.getTrangthai() == SELECTED) ccc.add(g);
+        return ccc;
+    }
+
     class GheVH extends RecyclerView.ViewHolder {
         @BindView(R.id.item_ghe_iv)        ImageView item_ghe_iv;
         @BindView(R.id.item_ghe_tenghe)        TextView item_ghe_tenghe;
@@ -96,11 +100,5 @@ public class AdapterGhe extends RecyclerView.Adapter<AdapterGhe.GheVH> {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }
-    }
-
-    public ArrayList<Ghe> getSelectedList(){
-        ArrayList<Ghe> ccc = new ArrayList<>();
-        for(Ghe g:danhsachGhe) if(g.getTrangthai()==SELECTED) ccc.add(g);
-        return ccc;
     }
 }

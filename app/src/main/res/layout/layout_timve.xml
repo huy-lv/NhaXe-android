@@ -29,15 +29,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chon diem di"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"/>
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
 
             <Spinner
                 android:id="@+id/timve_diemdi_sp"
@@ -47,8 +47,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chon diem den"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"/>
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
             <Spinner
                 android:id="@+id/timve_diemden_sp"
                 android:layout_width="200dp"
@@ -58,8 +58,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chon ngay di"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"/>
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
 
             <Spinner
                 android:id="@+id/timve_chonngay_sp"
@@ -69,8 +69,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chon gio di"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"/>
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
 
             <Spinner
                 android:id="@+id/timve_chongio_sp"
@@ -78,11 +78,11 @@
                 android:layout_height="wrap_content"/>
             <Button
                 android:id="@+id/timve_tieptuc_bt"
-                android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tiep tuc"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:text="Tiep tuc" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

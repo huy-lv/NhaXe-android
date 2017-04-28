@@ -17,7 +17,6 @@ import android.widget.Button;
 
 import com.bich.hp.nhaxe.Adapter.ViewpagerAdapter;
 import com.bich.hp.nhaxe.Model.DangNhap_DangKy.ModelDangNhap;
-import com.bich.hp.nhaxe.Model.User;
 import com.bich.hp.nhaxe.R;
 import com.bich.hp.nhaxe.Utils;
 import com.bich.hp.nhaxe.View.DangNhap_DangKy.DangNhapActivity;

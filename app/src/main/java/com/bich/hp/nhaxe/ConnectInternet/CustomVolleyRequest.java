@@ -22,12 +22,12 @@ import static com.facebook.FacebookSdk.getCacheDir;
 public class CustomVolleyRequest {
     private static CustomVolleyRequest customVolleyRequest;
     private static FragmentChiNhanh context;
-    private RequestQueue requestQueue;
-    private ImageLoader imageLoader;
     Cache cache;
     Context mcontext;
+    private RequestQueue requestQueue;
+    private ImageLoader imageLoader;
     private CustomVolleyRequest(FragmentChiNhanh context) {
-        this.context = context;
+        CustomVolleyRequest.context = context;
         this.requestQueue = getRequestQueue();
 
         imageLoader = new ImageLoader(requestQueue,

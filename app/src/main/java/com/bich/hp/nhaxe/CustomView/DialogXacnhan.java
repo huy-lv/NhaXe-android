@@ -57,11 +57,11 @@ public class DialogXacnhan extends Dialog {
     Button bt_tt_taiquay;
     @BindView(R.id.bt_tt_paypal)
     Button bt_tt_paypal;
+    int i1, i2;
     private AdapterGheDaChon adapter;
     private Lo_Trinh lotrinh;
     private User user;
     private ProgressDialog pd;
-    int i1,i2;
 
     public DialogXacnhan(@NonNull Context context) {
         super(context);

@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.bich.hp.nhaxe.Model.Lo_Trinh;
 import com.bich.hp.nhaxe.R;
 
 import butterknife.BindView;

@@ -124,10 +124,10 @@
                     android:id="@+id/seatLayoutLowerMain"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
+                    android:layout_above="@+id/btnChonGheTiepTuc"
                     android:layout_below="@+id/seatLegendLayout"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10.0dip"
-                    android:layout_above="@+id/btnChonGheTiepTuc">
+                    android:layout_marginTop="10.0dip">
 
                     <android.support.v7.widget.RecyclerView
                         android:id="@+id/rvChonGhe"
@@ -140,9 +140,9 @@
                     android:id="@+id/btnChonGheTiepTuc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tiep tuc"
                     android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true" />
+                    android:layout_centerHorizontal="true"
+                    android:text="Tiep tuc" />
             </RelativeLayout>
         </RelativeLayout>
 

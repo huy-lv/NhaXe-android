@@ -1,23 +1,17 @@
 package com.bich.hp.nhaxe.Adapter;
 
-import android.support.v7.widget.RecyclerView;
-import android.view.ViewGroup;
 import android.content.Context;
-import com.bumptech.glide.Glide;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
-
+import android.view.ViewGroup;
 import android.widget.ImageView;
-
 import android.widget.TextView;
 
 import com.bich.hp.nhaxe.Model.ChiNhanhNhaXe.ObjChiNhanhNhaXe;
 import com.bich.hp.nhaxe.R;
+import com.bumptech.glide.Glide;
 
-
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -28,11 +22,11 @@ import static com.bich.hp.nhaxe.View.TrangChu.MainActivity.SERVER_NAME;
  */
 
 public class ChiNhanhAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private Context context;
-    private LayoutInflater inflater;
     List<ObjChiNhanhNhaXe> data= Collections.emptyList();
     ObjChiNhanhNhaXe current;
     int currentPos=0;
+    private Context context;
+    private LayoutInflater inflater;
 
 
     public ChiNhanhAdapter(Context context, List<ObjChiNhanhNhaXe> data){
@@ -61,8 +55,7 @@ public class ChiNhanhAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         myHolder.tvSDT.setText( current.SDTCN);
 
 
-
-        Glide.with(context).load(SERVER_NAME+"/chinhanhnhaxe/" + current.HINHANH)
+        Glide.with(context).load(SERVER_NAME + "/hinh/chinhanhnhaxe/" + current.HINHANH)
                 .placeholder(R.drawable.ic_error_black_24dp)
                 .error(R.drawable.ic_error_black_24dp)
                 .into(myHolder.img);

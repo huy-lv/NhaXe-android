@@ -17,11 +17,16 @@ import java.util.ArrayList;
 
 public class Utils {
     public static final String SP_USER = "SP_USER";
+    public static final int EMPTY = 0;
+    public static final int OWNED = 2;
+    public static final int SELECTED = 1;
     public static String INTENT_KEY_TUYENXE = "INTENT_KEY_TUYENXE";
     public static String INTENT_KEY_NGAYDI = "INTENT_KEY_NGAYDI";
-    private static User user;
     public static String ngayDaChon;
     public static boolean LOGGEDIN;
+    public static ArrayList<Ghe> gheDaChon = new ArrayList<>();
+    public static Lo_Trinh loTrinhDaChon;
+    private static User user;
 
     public static User getCurrentUser() {
         if(user==null) user = new User();
@@ -34,12 +39,6 @@ public class Utils {
         Utils.getCurrentUser().setPhone(currentUser.getPhone());
     }
 
-    public static final int EMPTY=0;
-    public static final int OWNED=2;
-    public static final int SELECTED=1;
-
-    public static ArrayList<Ghe> gheDaChon = new ArrayList<>();
-    public static Lo_Trinh loTrinhDaChon;
     public static void showInfoDialog(Context c, String message){
         (new AlertDialog.Builder(c)).setMessage(message).setPositiveButton("OK",null).create().show();
     }

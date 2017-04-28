@@ -2,10 +2,8 @@ package com.bich.hp.nhaxe.View.TrangChu.fragment;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -40,10 +38,9 @@ import static com.bich.hp.nhaxe.View.TrangChu.MainActivity.SERVER_NAME;
 
 public class FragmentLichTrinhGiaVe extends Fragment   {
     public static final int READ_TIMEOUT = 15000;
+    public static final int CONNECTION_TIMEOUT = 10000;
     private RecyclerView mrc;
     private LTGVAdapter mad;
-    public static final int CONNECTION_TIMEOUT = 10000;
-
 
     @Nullable
     @Override

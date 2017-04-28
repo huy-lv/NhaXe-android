@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.bich.hp.nhaxe.ConnectInternet.LoTrinhResponse;
 import com.bich.hp.nhaxe.Model.Lo_Trinh;
 import com.bich.hp.nhaxe.R;
 

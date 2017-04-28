@@ -9,16 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.bich.hp.nhaxe.Adapter.CustomAdapter;
 import com.bich.hp.nhaxe.Model.ObjectClass.TinTuc;
 import com.bich.hp.nhaxe.Model.TinTuc.XMLDOMParser;
 import com.bich.hp.nhaxe.R;
 import com.bich.hp.nhaxe.View.WebView.WebViewTinTuc;
-
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

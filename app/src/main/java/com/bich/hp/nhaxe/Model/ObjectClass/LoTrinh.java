@@ -11,6 +11,7 @@ public class LoTrinh {
     String THOIGIANBATDAU;
     float GIA;
     String NGAYLAMVIEC;
+    int SOTRAMDUNG;
 
     public int getSOTRAMDUNG() {
         return SOTRAMDUNG;
@@ -20,7 +21,6 @@ public class LoTrinh {
         this.SOTRAMDUNG = SOTRAMDUNG;
     }
 
-    int SOTRAMDUNG;
     public String getTENLOTRINH() {
         return TENLOTRINH;
     }

@@ -43,9 +43,9 @@ public class VeDaDatActivity extends AppCompatActivity {
 
     ArrayList<Vexe> vexedadat;
     VexeAdapter vexeAdapter;
-    private ProgressDialog pd;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    private ProgressDialog pd;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

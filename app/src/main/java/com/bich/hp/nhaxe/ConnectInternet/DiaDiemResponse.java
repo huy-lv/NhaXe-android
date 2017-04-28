@@ -1,7 +1,5 @@
 package com.bich.hp.nhaxe.ConnectInternet;
 
-import android.location.Location;
-
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;

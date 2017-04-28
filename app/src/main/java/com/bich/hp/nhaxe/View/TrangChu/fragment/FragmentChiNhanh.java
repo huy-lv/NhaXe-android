@@ -1,9 +1,7 @@
 package com.bich.hp.nhaxe.View.TrangChu.fragment;
 
-import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,12 +10,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.Toast;
 
 import com.bich.hp.nhaxe.Adapter.ChiNhanhAdapter;
 import com.bich.hp.nhaxe.Model.ChiNhanhNhaXe.ObjChiNhanhNhaXe;
-
 import com.bich.hp.nhaxe.R;
 
 import org.json.JSONArray;
@@ -81,7 +77,7 @@ public class FragmentChiNhanh extends Fragment {
             try {
 
 
-               url = new URL(SERVER_NAME+"/ListNhaxe.php");
+                url = new URL(SERVER_NAME + "/ListNhaXe.php");
 
 
             } catch (MalformedURLException e) {

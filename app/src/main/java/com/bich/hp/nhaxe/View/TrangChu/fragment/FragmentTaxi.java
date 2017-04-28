@@ -9,11 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.bich.hp.nhaxe.R;
-
-import static com.facebook.FacebookSdk.getApplicationContext;
 
 /**
  * Created by hp on 2/14/2017.

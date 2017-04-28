@@ -5,7 +5,6 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.StyleRes;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -39,6 +38,19 @@ public class DialogChonGhe extends Dialog {
         init();
     }
 
+    public DialogChonGhe(@NonNull Context context) {
+        super(context);
+        init();
+    }
+
+    public DialogChonGhe(@NonNull Context context, @StyleRes int themeResId) {
+        super(context, themeResId);
+    }
+
+    protected DialogChonGhe(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
+        super(context, cancelable, cancelListener);
+    }
+
     public void setClick(OnClickOk o) {
         onClickListener = o;
     }
@@ -62,25 +74,11 @@ public class DialogChonGhe extends Dialog {
         dismiss();
     }
 
-    public DialogChonGhe(@NonNull Context context) {
-        super(context);
-        init();
-    }
-
-
-    public interface OnClickOk {
-        public void OnClickOk(String s);
-    }
-
     public String getTenKhachHang() {
         return dialog_chonghe_ten.getText().toString();
     }
 
-    public DialogChonGhe(@NonNull Context context, @StyleRes int themeResId) {
-        super(context, themeResId);
-    }
-
-    protected DialogChonGhe(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
-        super(context, cancelable, cancelListener);
+    public interface OnClickOk {
+        void OnClickOk(String s);
     }
 }

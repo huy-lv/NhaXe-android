@@ -1,7 +1,7 @@
 package com.bich.hp.nhaxe.View.TrangChu;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.bich.hp.nhaxe.R;

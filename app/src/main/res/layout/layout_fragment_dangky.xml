@@ -6,19 +6,20 @@
     android:layout_height="match_parent"
     >
     <LinearLayout
-        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:padding="10dp"
         >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cần điền tất cả các mục"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Cần điền tất cả các mục"
+            android:textStyle="bold"
             />
 
         <android.support.design.widget.TextInputLayout
@@ -67,9 +68,9 @@
                 android:id="@+id/edDiaChiEmailDK"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:hint="Địa chỉ email"
                 android:textColor="@color/den"
-                android:layout_margin="10dp"
                 />
 
         </android.support.design.widget.TextInputLayout>
@@ -87,9 +88,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Mật khẩu"
+                android:textColor="@color/den"
                 app:useStrike="true"
                 app:useValidate="true"
-                android:textColor="@color/den"
                 />
 
         </android.support.design.widget.TextInputLayout>
@@ -108,36 +109,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nhập lại mật khẩu"
-                app:useStrike="true"
-
                 android:textColor="@color/den"
+
+                app:useStrike="true"
                 />
 
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.v7.widget.SwitchCompat
-            android:id="@+id/sEmailDocQuyen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tôi muốn nhận các khuyến mãi qua email"
-            android:checked="true"
-            android:layout_margin="10dp"
-            />
+
 
         <Button
             android:id="@+id/btnTiepTucNhapThongTin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Đăng Ký"
-            android:padding="10dp"
+            android:layout_gravity="bottom"
             android:background="@color/bgToolbar"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Chúng tôi đã hiểu rõ các điều khoản bảo mật của Nhà Xe"
-            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="Đăng Ký"
             />
 
 

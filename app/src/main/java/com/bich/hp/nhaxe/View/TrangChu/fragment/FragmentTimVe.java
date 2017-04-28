@@ -47,23 +47,19 @@ public class FragmentTimVe extends Fragment {
     Spinner timve_chongio_sp;
 
     ArrayList<String> cacdiemdi;
+    Lo_Trinh tuyenXeHienTai;
     private ArrayAdapter<String> adapter_diemdi;
-
     private ArrayList<String> cacdiemden;
     private ArrayAdapter<String> adapter_diemden;
     private ArrayList<Lo_Trinh> lotrinh;
-
     private ArrayList<String> cacngay;
     private ArrayAdapter<String> adapter_cacngay;
     private ArrayList<PhanCongResponse.PhanCong> phancong;
-
     private ArrayList<String> cacgio;
     private ArrayAdapter<String> adapter_cacgio;
-
     private int currentDiemDi;
     private String currentMaTuyenXe;
     private int currentDiemDen;
-    Lo_Trinh tuyenXeHienTai;
     private String ngayHienTai;
 
     @Nullable

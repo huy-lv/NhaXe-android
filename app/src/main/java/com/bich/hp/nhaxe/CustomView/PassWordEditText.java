@@ -1,12 +1,10 @@
 package com.bich.hp.nhaxe.CustomView;
-import com.bich.hp.nhaxe.R;
 
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.content.ContextCompat;
 import android.text.InputType;
@@ -15,7 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 
-
+import com.bich.hp.nhaxe.R;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

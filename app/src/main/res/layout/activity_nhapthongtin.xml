@@ -86,8 +86,8 @@
             android:layout_gravity="center"
             android:background="@color/bgToolbar"
             android:padding="10dp"
-            android:textColor="@android:color/white"
-            android:text="TIẾP TỤC" />
+            android:text="TIẾP TỤC"
+            android:textColor="@android:color/white" />
 
         <LinearLayout
             android:layout_width="wrap_content"

@@ -41,10 +41,10 @@ import retrofit2.Response;
  */
 
 public class FragmentDangNhap extends Fragment implements View.OnClickListener,GoogleApiClient.OnConnectionFailedListener{
+    public static int SIGN_IN_GOOGLE_PLUS = 111;
     Button btnDangNhapFacebook,btnDangNhapGoogle,btnDangNhap;
     CallbackManager callbackManager;
     GoogleApiClient mGoogleApiClient;
-    public static int SIGN_IN_GOOGLE_PLUS = 111;
     ProgressDialog progressDialog;
     ModelDangNhap modelDangNhap;
     EditText edsdt,edMatKhau;
@@ -101,13 +101,13 @@ public class FragmentDangNhap extends Fragment implements View.OnClickListener,G
 
             case R.id.btnDangnhapfacebook:
                 LoginManager.getInstance().logInWithReadPermissions(FragmentDangNhap.this, Arrays.asList("public_profile,email"));
-                ;break;
+                break;
 
             case R.id.btnDangnhapgoogle:
                 Intent iGooglePlus = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
                 startActivityForResult(iGooglePlus,SIGN_IN_GOOGLE_PLUS);
                 showProcessDialog();
-                ;break;
+                break;
 
             case R.id.btnDangNhap:
                 final String tendangnhap = edsdt.getText().toString();

@@ -17,9 +17,6 @@ import com.bich.hp.nhaxe.CustomView.DialogXacnhan;
 import com.bich.hp.nhaxe.R;
 import com.bich.hp.nhaxe.Utils;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

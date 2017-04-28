@@ -5,37 +5,28 @@ package com.bich.hp.nhaxe.Model.ObjectClass;
  */
 
 public class KhachHang {
-    int MaThanhToan;
-    String     Cmnd;
-    String TenKHDN;
+    int MaPhuongThuc;
+
+    String TenDN;
     String MatKhauKH;
 
     String Email;
     String SoDT;
-    String EmailDocQuyen;
 
-    public int getMaThanhToan() {
-        return MaThanhToan;
+    public int getMaPhuongThuc() {
+        return MaPhuongThuc;
     }
 
-    public void setMaThanhToan(int maThanhToan) {
-        MaThanhToan = maThanhToan;
+    public void setMaPhuongThuc(int maPhuongThuc) {
+        MaPhuongThuc = maPhuongThuc;
     }
 
-    public String getCmnd() {
-        return Cmnd;
+    public String getTenDN() {
+        return TenDN;
     }
 
-    public void setCmnd(String cmnd) {
-        Cmnd = cmnd;
-    }
-
-    public String getTenKHDN() {
-        return TenKHDN;
-    }
-
-    public void setTenKHDN(String tenKHDN) {
-        TenKHDN = tenKHDN;
+    public void setTenDN(String tenDN) {
+        TenDN = tenDN;
     }
 
     public String getMatKhauKH() {
@@ -60,13 +51,5 @@ public class KhachHang {
 
     public void setSoDT(String soDT) {
         SoDT = soDT;
-    }
-
-    public String getEmailDocQuyen() {
-        return EmailDocQuyen;
-    }
-
-    public void setEmailDocQuyen(String emailDocQuyen) {
-        EmailDocQuyen = emailDocQuyen;
     }
 }

@@ -16,8 +16,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -38,8 +38,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -49,19 +49,19 @@
             android:textSize="15sp"/>
 
         <TextView
+            android:id="@+id/tv_Sdt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="sdt"
             android:textColor="@android:color/black"
-            android:textSize="15sp"
-            android:id="@+id/tv_Sdt"/>
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -71,19 +71,19 @@
             android:textSize="15sp"/>
 
         <TextView
+            android:id="@+id/tv_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="email"
             android:textColor="@android:color/black"
-            android:textSize="15sp"
-            android:id="@+id/tv_email"/>
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -93,19 +93,19 @@
             android:textSize="15sp"/>
 
         <TextView
+            android:id="@+id/tv_lotrinh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ten"
             android:textColor="@android:color/black"
-            android:textSize="15sp"
-            android:id="@+id/tv_lotrinh"/>
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -115,20 +115,20 @@
             android:textSize="15sp" />
 
         <TextView
+            android:id="@+id/tv_thoigian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ten"
             android:textColor="@android:color/black"
-            android:textSize="15sp"
-            android:id="@+id/tv_thoigian"/>
+            android:textSize="15sp" />
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
+        android:layout_margin="3dp"
         android:text="Cac ve da chon:"
-        android:layout_margin="3dp"/>
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_danhsachve"
         android:layout_width="match_parent"
@@ -139,17 +139,17 @@
         android:id="@+id/bt_tt_taiquay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Thanh toan tai quay"
-        android:background="#3c53ff"
-        android:textColor="@android:color/white"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:background="#3c53ff"
+        android:text="Thanh toan tai quay"
+        android:textColor="@android:color/white" />
 
     <Button
         android:id="@+id/bt_tt_paypal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#3c53ff"
         android:text="Thanh toan qua paypal"
-        android:textColor="@android:color/white"
-        android:background="#3c53ff"/>
+        android:textColor="@android:color/white" />
 </LinearLayout>

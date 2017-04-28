@@ -9,7 +9,6 @@ import com.bich.hp.nhaxe.View.TrangChu.fragment.FragmentKhuyenMai;
 import com.bich.hp.nhaxe.View.TrangChu.fragment.FragmentLichTrinhGiaVe;
 import com.bich.hp.nhaxe.View.TrangChu.fragment.FragmentTaxi;
 import com.bich.hp.nhaxe.View.TrangChu.fragment.FragmentTimVe;
-import com.bich.hp.nhaxe.View.TrangChu.fragment.FragmentTinTuc;
 import com.bich.hp.nhaxe.View.TrangChu.fragment.FragmentVanChuyenHangHoa;
 import com.bich.hp.nhaxe.View.TrangChu.fragment.VeFunBus;
 

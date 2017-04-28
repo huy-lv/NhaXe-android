@@ -1,7 +1,5 @@
 package com.bich.hp.nhaxe.View.TrangChu;
 
-import android.content.Context;
-
 import com.facebook.AccessToken;
 
 /**

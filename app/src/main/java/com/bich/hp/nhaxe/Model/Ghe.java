@@ -1,6 +1,5 @@
 package com.bich.hp.nhaxe.Model;
 
-import com.bich.hp.nhaxe.Utils;
 import com.google.gson.annotations.SerializedName;
 
 /**

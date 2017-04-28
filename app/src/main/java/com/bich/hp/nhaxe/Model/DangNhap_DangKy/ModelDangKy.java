@@ -3,8 +3,8 @@ package com.bich.hp.nhaxe.Model.DangNhap_DangKy;
 import android.util.Log;
 
 import com.bich.hp.nhaxe.ConnectInternet.DownloadJSON;
-import com.bich.hp.nhaxe.View.TrangChu.MainActivity;
 import com.bich.hp.nhaxe.Model.ObjectClass.KhachHang;
+import com.bich.hp.nhaxe.View.TrangChu.MainActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,7 +20,7 @@ import java.util.concurrent.ExecutionException;
 
 public class ModelDangKy {
     public Boolean DangKyThanhVien(KhachHang khachHang){
-        String duongdan =MainActivity.SERVER_NAME + "/nhaxe.php";
+        String duongdan = MainActivity.SERVER_NAME + "/nhaxe.php";
         boolean kiemtra = false;
         List<HashMap<String,String>> attr = new ArrayList<>();
         HashMap<String,String> hsHam = new HashMap<>();
@@ -30,32 +30,24 @@ public class ModelDangKy {
         hsSDT.put("sdt",khachHang.getSoDT());
 
         HashMap<String,String> hsmapt = new HashMap<>();
-        hsSDT.put("maphuongthuc",String.valueOf(khachHang.getMaThanhToan()));
+        hsSDT.put("maphuongthuc", String.valueOf(khachHang.getMaPhuongThuc()));
 
         HashMap<String,String> hsEmail = new HashMap<>();
-        hsEmail.put("email",khachHang.getEmailDocQuyen());
+        hsEmail.put("email", khachHang.getEmail());
 
 
-        HashMap<String,String> hsCMND = new HashMap<>();
-        hsCMND.put("cmnd",khachHang.getCmnd());
 
         HashMap<String,String> hsMatKhauKH = new HashMap<>();
         hsMatKhauKH.put("matkhaukh",khachHang.getMatKhauKH());
 
-
-
-        HashMap<String,String> hsEmailDocQuyen = new HashMap<>();
-        hsEmailDocQuyen.put("emaildocquyen",khachHang.getEmailDocQuyen());
-
         HashMap<String,String> hsTenkhdv = new HashMap<>();
-        hsTenkhdv.put("tenkhdv",khachHang.getEmailDocQuyen());
+        hsTenkhdv.put("tendn", khachHang.getTenDN());
 
         attr.add(hsHam);
         attr.add(hsSDT);
         attr.add(hsEmail);
         attr.add(hsMatKhauKH);
-        attr.add(hsEmailDocQuyen);
-        attr.add(hsCMND);
+
         attr.add(hsTenkhdv);
          attr.add(hsmapt);
 
@@ -69,11 +61,7 @@ public class ModelDangKy {
             JSONObject jsonObject = new JSONObject(dulieuJSON);
             String ketqua = jsonObject.getString("ketqua");
             Log.d("kiemtra",ketqua);
-            if(ketqua.equals("true")){
-                kiemtra = true;
-            }else{
-                kiemtra = false;
-            }
+            kiemtra = ketqua.equals("true");
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {

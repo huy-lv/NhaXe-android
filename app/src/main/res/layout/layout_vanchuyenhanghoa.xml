@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
 
-        android:padding="40dp"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="40dp">
 
         <Button
 
+            android:id="@+id/btncallvc"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_gray"
             android:drawableLeft="@drawable/telephone"
-            android:text=" Gọi Vận Chuyển: 19008193"
-
-            android:textColor="#f10c0c"
-            android:background="@drawable/bg_gray"
             android:drawableRight="@drawable/next"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btncallvc" />
+            android:text=" Gọi Vận Chuyển: 19008193"
+            android:textColor="#f10c0c" />
 
         <Button
-            android:text="Bảng Báo Giá"
-            android:drawableLeft="@drawable/gia"
-            android:textColor="#f10c0c"
-            android:background="@drawable/bg_gray"
-            android:drawableRight="@drawable/next"
+            android:id="@+id/btnBaoGia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnBaoGia" />
+            android:background="@drawable/bg_gray"
+            android:drawableLeft="@drawable/gia"
+            android:drawableRight="@drawable/next"
+            android:text="Bảng Báo Giá"
+            android:textColor="#f10c0c" />
         <LinearLayout
             android:id="@+id/fragment_layout"
             android:layout_width="match_parent"
@@ -41,13 +42,13 @@
         </LinearLayout>
 
         <Button
-            android:drawableLeft="@drawable/box"
-            android:background="@drawable/bg_gray"
-            android:text="        Cách Đóng Gói Hàng"
-            android:drawableRight="@drawable/next"
-            android:textColor="#f10c0c"
+            android:id="@+id/btndonggoi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btndonggoi" />
+            android:background="@drawable/bg_gray"
+            android:drawableLeft="@drawable/box"
+            android:drawableRight="@drawable/next"
+            android:text="        Cách Đóng Gói Hàng"
+            android:textColor="#f10c0c" />
     </LinearLayout>
 </LinearLayout>

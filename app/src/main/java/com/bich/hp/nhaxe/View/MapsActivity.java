@@ -1,18 +1,14 @@
 package com.bich.hp.nhaxe.View;
 
-import android.Manifest;
 import android.app.ProgressDialog;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 import com.bich.hp.nhaxe.Modules.DirectionFinder;
 import com.bich.hp.nhaxe.Modules.DirectionFinderListener;

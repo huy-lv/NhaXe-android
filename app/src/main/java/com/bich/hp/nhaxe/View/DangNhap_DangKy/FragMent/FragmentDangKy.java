@@ -4,14 +4,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.SwitchCompat;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -25,7 +23,7 @@ public class FragmentDangKy extends Fragment implements ViewDangKy,View.OnClickL
     PresenterlogicDangKy presenterLogicDangKy;
     Button btnDangKy;
     EditText edsdt, edMatKhau, edNhapLaiMatKhau, edDiaChiEmail, edTenkhdv;
-    SwitchCompat sEmailDocQuyen;
+
 
     TextInputLayout input_edsdt;
 
@@ -34,6 +32,7 @@ public class FragmentDangKy extends Fragment implements ViewDangKy,View.OnClickL
     TextInputLayout input_edTendvkh;
     TextInputLayout input_edDiaChiEmail;
     Boolean kiemtrathongtin = false;
+    String emaildocquyen = "";
 
     @Nullable
     @Override
@@ -51,7 +50,7 @@ public class FragmentDangKy extends Fragment implements ViewDangKy,View.OnClickL
 
         edTenkhdv = (EditText) view.findViewById(R.id.edTenKHDV);
 
-        sEmailDocQuyen = (SwitchCompat) view.findViewById(R.id.sEmailDocQuyen);
+
 
 
         input_edsdt = (TextInputLayout) view.findViewById(R.id.input_edsdt);
@@ -94,8 +93,6 @@ public class FragmentDangKy extends Fragment implements ViewDangKy,View.OnClickL
         }
     }
 
-    String emaildocquyen = "";
-
     private void btnDangKy() {
         String sdt = edsdt.getText().toString();
         String email = edDiaChiEmail.getText().toString();
@@ -104,26 +101,19 @@ public class FragmentDangKy extends Fragment implements ViewDangKy,View.OnClickL
         String tenkhdv = edTenkhdv.getText().toString();
         String nhaplaimatkhau = edNhapLaiMatKhau.getText().toString();
 
-        sEmailDocQuyen.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                emaildocquyen = b + "";
-            }
-        });
-
         if (kiemtrathongtin) {
             KhachHang khachHang = new KhachHang();
             khachHang.setSoDT(sdt);
-            khachHang.setMaThanhToan(1);
+            khachHang.setMaPhuongThuc(1);
             khachHang.setEmail(email);
             khachHang.setMatKhauKH(matkhau);
 
 
-            khachHang.setTenKHDN(tenkhdv);
-            khachHang.setEmailDocQuyen(emaildocquyen);
+            khachHang.setTenDN(tenkhdv);
+
             presenterLogicDangKy.ThucHienDangKy(khachHang);
         } else {
-            Log.d("kiemtra", "Dang ky that bai1 ");
+            Log.d("kiemtra", "Dang ky that bai ");
         }
 
 
@@ -158,7 +148,7 @@ public class FragmentDangKy extends Fragment implements ViewDangKy,View.OnClickL
                         }
                     }
                 }
-                ;break;
+                break;
 
             case R.id.edDiaChiEmailDK:
                 if(!b){
@@ -183,11 +173,11 @@ public class FragmentDangKy extends Fragment implements ViewDangKy,View.OnClickL
                         }
                     }
                 }
-                ;break;
+                break;
 
 
             case R.id.edMatKhauDK:
-                ;break;
+                break;
 
             case R.id.edNhapLaiMatKhauDK:
                 if(!b){
@@ -204,7 +194,7 @@ public class FragmentDangKy extends Fragment implements ViewDangKy,View.OnClickL
                     }
                 }
 
-                ;break;
+                break;
 
 
             case R.id.edTenKHDV:
@@ -224,7 +214,7 @@ public class FragmentDangKy extends Fragment implements ViewDangKy,View.OnClickL
                         }
 
                 }
-                ;break;
+                break;
 
 
         }
