@@ -22,9 +22,6 @@ import static com.bich.hp.nhaxe.Utils.EMPTY;
 import static com.bich.hp.nhaxe.Utils.OWNED;
 import static com.bich.hp.nhaxe.Utils.SELECTED;
 
-/**
- * Created by huylv on 12-Apr-17.
- */
 
 public class AdapterGhe extends RecyclerView.Adapter<AdapterGhe.GheVH> {
     public ArrayList<Ghe> danhsachGhe;
