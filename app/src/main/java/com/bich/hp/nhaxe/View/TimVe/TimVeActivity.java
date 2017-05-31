@@ -29,8 +29,6 @@ public class TimVeActivity extends AppCompatActivity {
     @BindView(R.id.btnTienHanhDatVe)    Button btnTienHanhDatVe;
     @BindView(R.id.tvThoiGian) TextView tvThoiGian;
 
-    private String ngaydi;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

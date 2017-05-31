@@ -225,7 +225,6 @@ public class FragmentTimVe extends Fragment {
     @OnClick(R.id.timve_tieptuc_bt)
     void tiectuc(){
         if(tuyenXeHienTai!=null && ngayHienTai!=null) {
-            Gson gson = new Gson();
             Intent i = new Intent(getActivity(), TimVeActivity.class);
             Utils.loTrinhDaChon = tuyenXeHienTai;
             Utils.ngayDaChon = ngayHienTai;
