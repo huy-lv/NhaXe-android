@@ -1,9 +1,11 @@
 package com.bich.hp.nhaxe.CustomView;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,12 +18,16 @@ import android.widget.Toast;
 import com.bich.hp.nhaxe.Adapter.AdapterGheDaChon;
 import com.bich.hp.nhaxe.ConnectInternet.BaseResponse;
 import com.bich.hp.nhaxe.ConnectInternet.RetrofitClient;
+import com.bich.hp.nhaxe.Mail;
 import com.bich.hp.nhaxe.Model.Ghe;
 import com.bich.hp.nhaxe.Model.Lo_Trinh;
 import com.bich.hp.nhaxe.Model.User;
 import com.bich.hp.nhaxe.R;
 import com.bich.hp.nhaxe.Utils;
 import com.bich.hp.nhaxe.View.TrangChu.MainActivity;
+
+import javax.mail.AuthenticationFailedException;
+import javax.mail.MessagingException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -155,16 +161,30 @@ public class DialogXacnhan extends Dialog {
 
     void checkDone(){
         if(i1 == Utils.gheDaChon.size()-1 && i2 == i1){
-            Log.e("Cxz","done");
-                    sendSMS(user.getPhone(), "Hoa don dat ve xe: Khach hang: " + user.getName() +
+            String message = "Hoa don dat ve xe: Khach hang: " + user.getName() +
                             ",email: " + user.getEmail() +
                             ", lo trinh: " + lotrinh.getDiemdi() +
                             " -> " + lotrinh.getDiemden() +
-                            " thanh toan hoa don tai 11/16 Pham Van Dong");
+                            " thanh toan hoa don tai 11/16 Pham Van Dong";
+            Log.e("Cxz","done");
+//                    sendSMS(user.getPhone(), message);
+
+            //send email
+            String[] recipients = { user.getEmail() };
+            SendEmailAsyncTask email = new SendEmailAsyncTask();
+            email.m = new Mail("bitransoft@gmail.com", "bitransoft9395!");
+            email.m.set_from("bitransoft@gmail.com");
+            email.m.setBody(message);
+            email.m.set_to(recipients);
+            email.m.set_subject("Hoa don dat ve xe");
+            email.execute();
+
             Toast.makeText(c,"Dat ve thanh cong!",Toast.LENGTH_SHORT).show();
             dismiss();
             pd.dismiss();
+
             c.startActivity(new Intent(c, MainActivity.class));
+            ((Activity)c).finish();
             gheDaChon.clear();
             loTrinhDaChon= null;
             ngayDaChon=null;
@@ -185,5 +205,37 @@ public class DialogXacnhan extends Dialog {
                 null);
         Toast.makeText(getApplicationContext(), "Dat ve thanh cong!", Toast.LENGTH_LONG).show();
 
+    }
+
+    class SendEmailAsyncTask extends AsyncTask<Void, Void, Boolean> {
+        Mail m;
+        public SendEmailAsyncTask() {}
+
+        @Override
+        protected Boolean doInBackground(Void... params) {
+            try {
+                if (m.send()) {
+                    Toast.makeText(getApplicationContext(),"Email sent.", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(),"Email failed to send.", Toast.LENGTH_LONG).show();
+                }
+
+                return true;
+            } catch (AuthenticationFailedException e) {
+                Log.e(SendEmailAsyncTask.class.getName(), "Bad account details");
+                e.printStackTrace();
+//                Toast.makeText(getApplicationContext(),"Authentication failed.", Toast.LENGTH_LONG).show();
+                return false;
+            } catch (MessagingException e) {
+                Log.e(SendEmailAsyncTask.class.getName(), "Email failed");
+                e.printStackTrace();
+//                Toast.makeText(getApplicationContext(),"Email failed to send.", Toast.LENGTH_LONG).show();
+                return false;
+            } catch (Exception e) {
+                e.printStackTrace();
+//                Toast.makeText(getApplicationContext(),"Unexpected error occured.", Toast.LENGTH_LONG).show();
+                return false;
+            }
+        }
     }
 }

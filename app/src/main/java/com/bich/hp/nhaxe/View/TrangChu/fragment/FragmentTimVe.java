@@ -20,7 +20,6 @@ import com.bich.hp.nhaxe.Model.Lo_Trinh;
 import com.bich.hp.nhaxe.R;
 import com.bich.hp.nhaxe.Utils;
 import com.bich.hp.nhaxe.View.TimVe.TimVeActivity;
-import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -224,13 +223,17 @@ public class FragmentTimVe extends Fragment {
 
     @OnClick(R.id.timve_tieptuc_bt)
     void tiectuc(){
-        if(tuyenXeHienTai!=null && ngayHienTai!=null) {
-            Intent i = new Intent(getActivity(), TimVeActivity.class);
-            Utils.loTrinhDaChon = tuyenXeHienTai;
-            Utils.ngayDaChon = ngayHienTai;
-            startActivity(i);
+        if(Utils.LOGGEDIN) {
+            if (tuyenXeHienTai != null && ngayHienTai != null) {
+                Intent i = new Intent(getActivity(), TimVeActivity.class);
+                Utils.loTrinhDaChon = tuyenXeHienTai;
+                Utils.ngayDaChon = ngayHienTai;
+                startActivity(i);
+            } else {
+                Toast.makeText(getActivity(), "Ban chua chon tuyen xe nao!", Toast.LENGTH_SHORT).show();
+            }
         }else{
-            Toast.makeText(getActivity(),"Ban chua chon tuyen xe nao!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Ban chua dang nhap!", Toast.LENGTH_SHORT).show();
         }
     }
 
