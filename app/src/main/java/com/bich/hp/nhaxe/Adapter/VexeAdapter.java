@@ -44,6 +44,7 @@ public class VexeAdapter extends RecyclerView.Adapter<VexeAdapter.VexeVH> {
         holder.vexe_tenghe.setText(v.getTenghe());
         holder.vexe_mave.setText(String.valueOf(v.getMave()));
         holder.vexe_tenkhachhang.setText(v.getTenkhachhang());
+        holder.vexe_gia.setText(v.getTongtien());
         holder.vexe_huyve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,6 +73,8 @@ public class VexeAdapter extends RecyclerView.Adapter<VexeAdapter.VexeVH> {
         TextView vexe_giokhoihanh;
         @BindView(R.id.vexe_huyve)
         Button vexe_huyve;
+        @BindView(R.id.vexe_gia)
+        TextView vexe_gia;
 
         public VexeVH(View itemView) {
             super(itemView);
