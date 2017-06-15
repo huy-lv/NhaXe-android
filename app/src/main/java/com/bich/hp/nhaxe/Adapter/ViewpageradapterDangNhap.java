@@ -7,9 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.bich.hp.nhaxe.View.DangNhap_DangKy.FragMent.FragmentDangKy;
 import com.bich.hp.nhaxe.View.DangNhap_DangKy.FragMent.FragmentDangNhap;
 
-/**
- * Created by hp on 2/17/2017.
- */
+
 
 public class ViewpageradapterDangNhap extends FragmentPagerAdapter {
     public ViewpageradapterDangNhap(FragmentManager fm) {

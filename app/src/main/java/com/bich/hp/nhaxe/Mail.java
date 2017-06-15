@@ -1,8 +1,5 @@
 package com.bich.hp.nhaxe;
 
-/**
- * Created by Teko on 6/1/2017.
- */
 
 import java.util.Date;
 import java.util.Properties;
@@ -22,9 +19,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-/**
- * Created by brandonjenniges on 11/6/15.
- */
+
 public class Mail extends javax.mail.Authenticator {
     private String _user;
     private String _pass;

@@ -53,7 +53,7 @@
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="5.0dip"
                             android:layout_toRightOf="@+id/availableImage"
-                            android:text="Ghế Trống"
+                            android:text="@string/ghetrong"
                             android:textSize="12.0sp" />
                     </RelativeLayout>
 
@@ -80,7 +80,7 @@
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="5.0dip"
                             android:layout_toRightOf="@+id/bookedImage"
-                            android:text="Đã Đặt"
+                            android:text="@string/dadat"
                             android:textSize="12.0sp" />
                     </RelativeLayout>
 
@@ -105,7 +105,7 @@
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="5.0dip"
                             android:layout_toRightOf="@+id/selectedImage"
-                            android:text="Đã Chọn"
+                            android:text="@string/dachon"
                             android:textSize="12.0sp" />
                     </RelativeLayout>
 
@@ -142,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:text="Tiep tuc" />
+                    android:text="@string/tieptuc" />
             </RelativeLayout>
         </RelativeLayout>
 

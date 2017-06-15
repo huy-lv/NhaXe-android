@@ -1,8 +1,6 @@
 package com.bich.hp.nhaxe.Model.ObjLichTrinhGiaVe;
 
-/**
- * Created by hp on taxibg/28/2017.
- */
+
 
 public class ObjLTGV {
     public String DIEMDI;

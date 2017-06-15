@@ -4,9 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-/**
- * Created by huylv on 11-Apr-17.
- */
+
 
 public class PhanCongResponse {
     @SerializedName("PHANCONG")

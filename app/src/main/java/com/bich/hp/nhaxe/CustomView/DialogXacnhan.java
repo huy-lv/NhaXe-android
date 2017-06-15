@@ -41,9 +41,7 @@ import static com.bich.hp.nhaxe.Utils.loTrinhDaChon;
 import static com.bich.hp.nhaxe.Utils.ngayDaChon;
 import static com.facebook.FacebookSdk.getApplicationContext;
 
-/**
- * Created by huylv on 13-Apr-17.
- */
+
 
 public class DialogXacnhan extends Dialog {
     Context c;
@@ -161,13 +159,17 @@ public class DialogXacnhan extends Dialog {
 
     void checkDone(){
         if(i1 == Utils.gheDaChon.size()-1 && i2 == i1){
-            String message = "Hoa don dat ve xe: Khach hang: " + user.getName() +
-                            ",email: " + user.getEmail() +
-                            ", lo trinh: " + lotrinh.getDiemdi() +
+            String message = "Hoá Đơn Đặt Vé Xe: " +
+                    "\nKhách Hàng: " + user.getName() +
+                            ",\nEmail: " + user.getEmail() +
+                            ",\nLộ Trình: " + lotrinh.getDiemdi() +
                             " -> " + lotrinh.getDiemden() +
-                            " thanh toan hoa don tai 11/16 Pham Van Dong";
+                            "\nGiá Vé :"+
+                            lotrinh.getGia()+
+                            "\nVui lòng đến nhà xe trước giờ khởi hành 15p để lấy vé và thanh toán." +
+                    "\n Cảm Ơn Quý Khách Đã Sử Dụng Dịch Vụ Của Chúng Tôi";
             Log.e("Cxz","done");
-//                    sendSMS(user.getPhone(), message);
+            sendSMS(user.getPhone(), message);
 
             //send email
             String[] recipients = { user.getEmail() };
@@ -176,10 +178,10 @@ public class DialogXacnhan extends Dialog {
             email.m.set_from("bitransoft@gmail.com");
             email.m.setBody(message);
             email.m.set_to(recipients);
-            email.m.set_subject("Hoa don dat ve xe");
+            email.m.set_subject("Hóa Đơn Đặt Vé Xe:");
             email.execute();
 
-            Toast.makeText(c,"Dat ve thanh cong!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(c,"Đặt Vé Thành Công!",Toast.LENGTH_SHORT).show();
             dismiss();
             pd.dismiss();
 
@@ -203,7 +205,7 @@ public class DialogXacnhan extends Dialog {
                 message,
                 null,
                 null);
-        Toast.makeText(getApplicationContext(), "Dat ve thanh cong!", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Đặt Vé Thành Công!", Toast.LENGTH_LONG).show();
 
     }
 

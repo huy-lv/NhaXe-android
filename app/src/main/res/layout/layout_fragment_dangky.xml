@@ -18,7 +18,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:text="Cần điền tất cả các mục"
+            android:text="@string/cdtccm"
             android:textStyle="bold"
             />
 
@@ -33,7 +33,7 @@
                 android:id="@+id/edTenKHDV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tên Hiển Thị"
+                android:hint="@string/tenhienthi"
                 android:textColor="@color/den"
                 />
 
@@ -50,7 +50,7 @@
                 android:id="@+id/edsdt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Số điện thoại liên hệ"
+                android:hint="@string/sdtlienhe"
                 android:textColor="@color/den"
                 />
 
@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="Địa chỉ email"
+                android:hint="@string/diachiemail"
                 android:textColor="@color/den"
                 />
 
@@ -87,7 +87,7 @@
                 android:id="@+id/edMatKhauDK"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Mật khẩu"
+                android:hint="@string/matkhau"
                 android:textColor="@color/den"
                 app:useStrike="true"
                 app:useValidate="true"
@@ -108,7 +108,7 @@
                 android:id="@+id/edNhapLaiMatKhauDK"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nhập lại mật khẩu"
+                android:hint="@string/nlmk"
                 android:textColor="@color/den"
 
                 app:useStrike="true"
@@ -125,7 +125,7 @@
             android:layout_gravity="bottom"
             android:background="@color/bgToolbar"
             android:padding="10dp"
-            android:text="Đăng Ký"
+            android:text="@string/dangky"
             />
 
 

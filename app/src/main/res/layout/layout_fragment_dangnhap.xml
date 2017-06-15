@@ -15,7 +15,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nhập Số Điện Thoại" />
+            android:hint="@string/nhapsdt" />
 
     </android.support.design.widget.TextInputLayout>
     <android.support.design.widget.TextInputLayout
@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:hint="Mật khẩu"
+            android:hint="@string/matkhau"
             app:useStrike="true" />
 
     </android.support.design.widget.TextInputLayout>
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:gravity="right"
-        android:text="Quên mật khẩu?"
+        android:text="@string/quenmk"
         android:textColor="#55d9c9" />
     <Button
         android:id="@+id/btnDangNhap"
@@ -44,41 +44,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@color/bgToolbar"
-        android:text="ĐĂNG NHẬP" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Hoặc đăng nhập bằng:" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:text="@string/dangnhap" />
 
-        <Button
 
-            android:id="@+id/btnDangnhapfacebook"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/vienfacebook"
-            android:drawableLeft="@drawable/facebookiconsmall"
-            android:text="Facebook"
-            android:textColor="@color/colorFacebook" />
 
-        <Button
-            android:id="@+id/btnDangnhapgoogle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/viengoogle"
-            android:drawableLeft="@drawable/googleplussmall"
-            android:text="Google"
-            android:textColor="@color/colorGoogle" />
 
-    </LinearLayout>
+
+
 </LinearLayout>

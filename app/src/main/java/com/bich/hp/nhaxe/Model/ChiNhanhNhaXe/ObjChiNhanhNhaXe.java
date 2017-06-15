@@ -1,8 +1,6 @@
 package com.bich.hp.nhaxe.Model.ChiNhanhNhaXe;
 
-/**
- * Created by hp on taxibg/14/2017.
- */
+
 
 public class ObjChiNhanhNhaXe {
     public String HINHANH;

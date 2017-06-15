@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/imageView3"
-        android:text="Ghe: " />
+        android:text="@string/ghe" />
     <TextView
         android:id="@+id/tv_ghedachon_tenghe"
         android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
         android:layout_toEndOf="@+id/imageView3"
-        android:text="Ten: " />
+        android:text="@string/ten" />
     <TextView
         android:id="@+id/tv_ghedachon_ten"
         android:layout_width="wrap_content"

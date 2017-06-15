@@ -7,9 +7,10 @@
     android:padding="10dp">
 
     <TextView
+        android:textColor="#1953e6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nhap ten hanh khach"
+        android:text="@string/nhaptenhanhkhach"
         android:textSize="20sp" />
 
     <EditText
@@ -24,14 +25,16 @@
         android:orientation="horizontal">
 
         <Button
+            android:background="@drawable/gbbt"
             android:id="@+id/dialog_chonghe_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancel"/>
+            android:text="@string/huy"/>
         <Button
+            android:background="@drawable/gbbt"
             android:id="@+id/dialog_chonghe_ok"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="OK"/>
+            android:text="@string/dongy"/>
     </LinearLayout>
 </LinearLayout>

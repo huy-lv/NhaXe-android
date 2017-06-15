@@ -17,9 +17,7 @@ import com.bich.hp.nhaxe.R;
 import com.bich.hp.nhaxe.View.TrangChu.BaoGiaVanChuyen;
 import com.bich.hp.nhaxe.View.TrangChu.DongGoiHangHoa;
 
-/**
- * Created by hp on 2/14/2017.
- */
+
 
 public class FragmentVanChuyenHangHoa extends Fragment {
     Button btnBaoGia, btncallvc;

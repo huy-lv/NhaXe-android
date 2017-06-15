@@ -1,8 +1,5 @@
 package com.bich.hp.nhaxe.Model.ObjectClass;
 
-/**
- * Created by hp on 2/26/2017.
- */
 
 public class KhachHang {
     int MaPhuongThuc;
@@ -12,6 +9,10 @@ public class KhachHang {
 
     String Email;
     String SoDT;
+
+    String old_password;
+    String new_password;
+    String code;
 
     public int getMaPhuongThuc() {
         return MaPhuongThuc;
@@ -51,5 +52,18 @@ public class KhachHang {
 
     public void setSoDT(String soDT) {
         SoDT = soDT;
+    }
+
+
+    public void setOld_password(String old_password) {
+        this.old_password = old_password;
+    }
+
+    public void setNew_password(String new_password) {
+        this.new_password = new_password;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 }

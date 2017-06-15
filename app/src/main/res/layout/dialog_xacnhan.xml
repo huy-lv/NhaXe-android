@@ -6,11 +6,13 @@
     android:padding="10dp">
 
     <TextView
+        android:textColor="#ea1515"
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="THONG TIN HOA DON"
-        android:textColor="@android:color/black"
+        android:text="@string/thongtindv"
+
         android:textSize="20sp" />
 
     <LinearLayout
@@ -22,7 +24,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ho ten:"
+            android:text="@string/hotenkh"
             android:textColor="@android:color/black"
             android:textSize="15sp" />
 
@@ -30,7 +32,7 @@
             android:id="@+id/tv_Ten"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ten"
+            android:text="Tên"
             android:textColor="@android:color/black"
             android:textSize="15sp" />
     </LinearLayout>
@@ -44,7 +46,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="So dien thoai: "
+            android:text="@string/sdt"
             android:textColor="@android:color/black"
             android:textSize="15sp"/>
 
@@ -66,7 +68,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email: "
+            android:text="@string/email"
             android:textColor="@android:color/black"
             android:textSize="15sp"/>
 
@@ -88,7 +90,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lo trinh:"
+            android:text="@string/lotrinh"
             android:textColor="@android:color/black"
             android:textSize="15sp"/>
 
@@ -110,7 +112,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thoi gian:"
+            android:text="@string/thoigian"
             android:textColor="@android:color/black"
             android:textSize="15sp" />
 
@@ -123,11 +125,12 @@
             android:textSize="15sp" />
     </LinearLayout>
     <TextView
+        android:textColor="#ea1515"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
-        android:text="Cac ve da chon:"
-        android:textColor="@android:color/black"
+        android:text="@string/cacvedachon"
+
         android:textSize="15sp" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_danhsachve"
@@ -136,20 +139,22 @@
 
     </android.support.v7.widget.RecyclerView>
     <Button
+        android:gravity="center"
         android:id="@+id/bt_tt_taiquay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
-        android:background="#3c53ff"
-        android:text="Thanh toan tai quay"
-        android:textColor="@android:color/white" />
+        android:background="#46bef5"
+        android:text="Thanh Toán Tại Quầy"
+        android:textColor="#ea1515" />
 
     <Button
+        android:gravity="center"
         android:id="@+id/bt_tt_paypal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#3c53ff"
-        android:text="Thanh toan qua paypal"
-        android:textColor="@android:color/white" />
+        android:background="#46bef5"
+        android:text="@string/thanhtoanquapaypal"
+        android:textColor="#ea1515" />
 </LinearLayout>

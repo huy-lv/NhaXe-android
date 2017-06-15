@@ -2,9 +2,7 @@ package com.bich.hp.nhaxe.Model;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by huylv on 14-Apr-17.
- */
+
 
 public class Vexe {
     @SerializedName("MAVE")

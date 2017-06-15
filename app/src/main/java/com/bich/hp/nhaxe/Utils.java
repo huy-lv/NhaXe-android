@@ -11,9 +11,7 @@ import com.bich.hp.nhaxe.Model.User;
 
 import java.util.ArrayList;
 
-/**
- * Created by huylv on 11-Apr-17.
- */
+
 
 public class Utils {
     public static final String SP_USER = "SP_USER";

@@ -27,9 +27,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * Created by huylv on 12-Apr-17.
- */
+
 
 public class ChonGheActivity extends AppCompatActivity {
     @BindView(R.id.rvChonGhe)
@@ -90,7 +88,7 @@ public class ChonGheActivity extends AppCompatActivity {
             }
             startActivity(new Intent(this, NhapThongTinActivity.class));
         }else{
-            Utils.showInfoDialog(this,"Ban chua chon ghe nao!");
+            Utils.showInfoDialog(this,"Vui Lòng Chọn Ghế!");
         }
     }
 }

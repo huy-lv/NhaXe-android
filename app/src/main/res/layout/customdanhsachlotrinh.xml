@@ -30,7 +30,7 @@
                 android:id="@+id/tvDiemDi1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Diem Di"
+                android:text="@string/diemdi"
                 android:textSize="16sp"
                 android:textStyle="bold" />
             <TextView
@@ -43,7 +43,7 @@
                 android:id="@+id/tvDiemDen1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Diem Den"
+                android:text="@string/diemden"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -59,7 +59,7 @@
                 android:id="@+id/tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tên Tuyến:" />
+                android:text="@string/tentuyen" />
 
 
             <TextView
@@ -82,7 +82,7 @@
                 android:id="@+id/tv3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Số Trạm Dừng:" />
+                android:text="@string/sotramdung" />
 
 
             <TextView
@@ -100,7 +100,7 @@
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:text="Ngày : " />
+               android:text="@string/ngay" />
             <TextView
                 android:id="@+id/tvNgay"
                 android:layout_width="wrap_content"
@@ -119,7 +119,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Giờ Khởi Hành:" />
+                android:text="@string/giokhoihanh" />
 
             <TextView
                 android:id="@+id/tvThoiGian"
@@ -152,7 +152,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingLeft="5dp"
-                    android:text="đồng/vé" />
+                    android:text="@string/dongtrenve" />
             </LinearLayout>
             <Button
                 android:id="@+id/btnTienHanhDatVe"
@@ -163,7 +163,7 @@
                 android:layout_weight="0.40"
                 android:background="@drawable/gbbt"
                 android:gravity="center"
-                android:text="Tiến Hành Đặt Vé"
+                android:text="@string/tienhanhdatve"
                 android:textColor="#e22020"
                 android:textSize="10dp" />
         </LinearLayout>

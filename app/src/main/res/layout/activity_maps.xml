@@ -9,13 +9,13 @@
         android:id="@+id/etOrigin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter origin address" />
+        android:hint="@string/nhapdiemdi" />
 
     <EditText
         android:id="@+id/etDestination"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter destination address" />
+        android:hint="@string/nhapdiemden" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             android:id="@+id/btnFindPath"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Find path" />
+            android:text="@string/timduong" />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"

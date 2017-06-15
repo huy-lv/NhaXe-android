@@ -5,9 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-/**
- * Created by huylv on 14-Apr-17.
- */
+
 
 public class LoginResponse  {
     @SerializedName("error")

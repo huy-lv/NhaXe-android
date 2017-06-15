@@ -59,7 +59,7 @@
                             android:drawableLeft="@drawable/ic_search_black_24dp"
                             android:drawableRight="@drawable/images"
                             android:paddingLeft="10dp"
-                            android:text="Tìm Đường Đi..."
+                            android:text="@string/timduongdi"
                             android:textAlignment="viewStart"
                             android:textAllCaps="false"
                             android:textColor="@color/colorGray"
@@ -84,10 +84,10 @@
                         </android.support.v7.widget.Toolbar>
 
                     <ImageView
-                        android:layout_width="80dp"
+                        android:layout_width="150dp"
                         android:layout_height="57dp"
                         android:layout_gravity="left"
-                        android:background="@drawable/xe" />
+                        android:background="@drawable/logonhaxe" />
 
                 </android.support.design.widget.CollapsingToolbarLayout>
 

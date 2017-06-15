@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.bich.hp.nhaxe.ConnectInternet.LoginResponse;
 import com.bich.hp.nhaxe.ConnectInternet.RetrofitClient;
@@ -36,9 +37,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * Created by hp on 2/17/2017.
- */
+
 
 public class FragmentDangNhap extends Fragment implements View.OnClickListener,GoogleApiClient.OnConnectionFailedListener{
     public static int SIGN_IN_GOOGLE_PLUS = 111;
@@ -49,6 +48,7 @@ public class FragmentDangNhap extends Fragment implements View.OnClickListener,G
     ModelDangNhap modelDangNhap;
     EditText edsdt,edMatKhau;
     ProgressDialog pd;
+    TextView tvQuenMatKhau;
 
     @Nullable
     @Override
@@ -81,8 +81,8 @@ public class FragmentDangNhap extends Fragment implements View.OnClickListener,G
             }
         });
 
-        btnDangNhapFacebook = (Button) view.findViewById(R.id.btnDangnhapfacebook);
-        btnDangNhapGoogle = (Button) view.findViewById(R.id.btnDangnhapgoogle);
+        //btnDangNhapFacebook = (Button) view.findViewById(R.id.btnDangnhapfacebook);
+       // btnDangNhapGoogle = (Button) view.findViewById(R.id.btnDangnhapgoogle);
         btnDangNhap = (Button) view.findViewById(R.id.btnDangNhap);
         edsdt = (EditText) view.findViewById(R.id.edDiaChiEmailDangNhap);
         edMatKhau = (EditText) view.findViewById(R.id.edMatKhauDangNhap);
@@ -90,6 +90,13 @@ public class FragmentDangNhap extends Fragment implements View.OnClickListener,G
         btnDangNhapFacebook.setOnClickListener(this);
         btnDangNhapGoogle.setOnClickListener(this);
         btnDangNhap.setOnClickListener(this);
+        tvQuenMatKhau =(TextView)view.findViewById(R.id.tvQuenMatKhau);
+        tvQuenMatKhau.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         return view;
     }
@@ -99,7 +106,7 @@ public class FragmentDangNhap extends Fragment implements View.OnClickListener,G
         int id = view.getId();
         switch (id){
 
-            case R.id.btnDangnhapfacebook:
+           /* case R.id.btnDangnhapfacebook:
                 LoginManager.getInstance().logInWithReadPermissions(FragmentDangNhap.this, Arrays.asList("public_profile,email"));
                 break;
 
@@ -107,7 +114,7 @@ public class FragmentDangNhap extends Fragment implements View.OnClickListener,G
                 Intent iGooglePlus = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
                 startActivityForResult(iGooglePlus,SIGN_IN_GOOGLE_PLUS);
                 showProcessDialog();
-                break;
+                break;   */
 
             case R.id.btnDangNhap:
                 final String tendangnhap = edsdt.getText().toString();

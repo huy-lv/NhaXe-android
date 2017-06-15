@@ -2,9 +2,7 @@ package com.bich.hp.nhaxe.Model;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by huylv on 12-Apr-17.
- */
+
 
 public class Ghe {
     @SerializedName("BIENSOXE")

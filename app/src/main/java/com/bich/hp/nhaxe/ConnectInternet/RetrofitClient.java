@@ -12,9 +12,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
-/**
- * Created by huylv on 11-Apr-17.
- */
+
 
 public class RetrofitClient {
     static String BASEURL = "https://quanlynhaxe-huylv177.c9users.io";

@@ -15,12 +15,12 @@
 
             android:id="@+id/btncallvc"
             android:layout_width="match_parent"
-
+            android:gravity="center"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_gray"
             android:drawableLeft="@drawable/telephone"
             android:drawableRight="@drawable/next"
-            android:text=" Gọi Vận Chuyển: 19008193"
+            android:text="@string/goivanchuyen"
             android:textColor="#f10c0c" />
 
         <Button
@@ -30,7 +30,8 @@
             android:background="@drawable/bg_gray"
             android:drawableLeft="@drawable/gia"
             android:drawableRight="@drawable/next"
-            android:text="Bảng Báo Giá"
+            android:text="@string/bbg"
+            android:gravity="center"
             android:textColor="#f10c0c" />
         <LinearLayout
             android:id="@+id/fragment_layout"
@@ -42,13 +43,15 @@
         </LinearLayout>
 
         <Button
+            android:gravity="center"
+
             android:id="@+id/btndonggoi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_gray"
             android:drawableLeft="@drawable/box"
             android:drawableRight="@drawable/next"
-            android:text="        Cách Đóng Gói Hàng"
+            android:text="@string/cdgh"
             android:textColor="#f10c0c" />
     </LinearLayout>
 </LinearLayout>

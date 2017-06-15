@@ -32,9 +32,7 @@ import java.util.List;
 
 import static com.bich.hp.nhaxe.View.TrangChu.MainActivity.SERVER_NAME;
 
-/**
- * Created by hp on 2/14/2017.
- */
+
 
 public class FragmentChiNhanh extends Fragment {
     public static final int CONNECTION_TIMEOUT = 10000;

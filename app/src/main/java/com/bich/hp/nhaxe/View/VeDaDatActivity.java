@@ -28,9 +28,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * Created by huylv on 14-Apr-17.
- */
 
 public class VeDaDatActivity extends AppCompatActivity {
 
@@ -88,7 +85,7 @@ public class VeDaDatActivity extends AppCompatActivity {
 
 
     public void huyve(final Vexe v) {
-        Utils.showConfirmDialog(this, "Ban co chac chan muon huy ve nay khong?", new DialogInterface.OnClickListener() {
+        Utils.showConfirmDialog(this, "Bạn có chắc muốn hủy vé này?", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 thuchienhuyve(v);
@@ -103,7 +100,7 @@ public class VeDaDatActivity extends AppCompatActivity {
             public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
                 if (response.body().getError() == 0) {
                     pd.dismiss();
-                    Utils.showInfoDialog(VeDaDatActivity.this, "Huy ve thanh cong!");
+                    Utils.showInfoDialog(VeDaDatActivity.this, "Hủy vé thành công!");
                     loadVexe();
 
                 } else {

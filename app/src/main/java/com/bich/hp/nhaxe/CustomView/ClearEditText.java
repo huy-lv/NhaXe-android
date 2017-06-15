@@ -12,9 +12,7 @@ import android.widget.EditText;
 
 import com.bich.hp.nhaxe.R;
 
-/**
- * Created by hp on 2/18/2017.
- */
+
 
 public class ClearEditText extends EditText {
     Drawable crossx,nonecrossx,drawable;

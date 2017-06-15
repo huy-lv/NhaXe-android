@@ -4,9 +4,6 @@ import com.bich.hp.nhaxe.Model.DangNhap_DangKy.ModelDangKy;
 import com.bich.hp.nhaxe.Model.ObjectClass.KhachHang;
 import com.bich.hp.nhaxe.View.DangNhap_DangKy.ViewDangKy;
 
-/**
- * Created by hp on 2/26/2017.
- */
 
 public class PresenterlogicDangKy implements IPresenterDangKy {
     ViewDangKy viewDangKy;

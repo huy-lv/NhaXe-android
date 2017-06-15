@@ -12,9 +12,7 @@ import android.widget.Button;
 
 import com.bich.hp.nhaxe.R;
 
-/**
- * Created by hp on 2/14/2017.
- */
+
 
 public class FragmentTaxi extends Fragment {
     Button btnCall;

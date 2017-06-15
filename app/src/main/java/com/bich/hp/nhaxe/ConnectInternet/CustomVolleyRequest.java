@@ -15,9 +15,6 @@ import com.bich.hp.nhaxe.View.TrangChu.fragment.FragmentChiNhanh;
 
 import static com.facebook.FacebookSdk.getCacheDir;
 
-/**
- * Created by hp on taxibg/14/2017.
- */
 
 public class CustomVolleyRequest {
     private static CustomVolleyRequest customVolleyRequest;

@@ -19,6 +19,7 @@ import com.bich.hp.nhaxe.ConnectInternet.RetrofitClient;
 import com.bich.hp.nhaxe.Model.Lo_Trinh;
 import com.bich.hp.nhaxe.R;
 import com.bich.hp.nhaxe.Utils;
+import com.bich.hp.nhaxe.View.DangNhap_DangKy.DangNhapActivity;
 import com.bich.hp.nhaxe.View.TimVe.TimVeActivity;
 
 import java.util.ArrayList;
@@ -30,9 +31,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * Created by hp on 2/14/2017.
- */
+
 
 public class FragmentTimVe extends Fragment {
 
@@ -93,7 +92,7 @@ public class FragmentTimVe extends Fragment {
                         public void onResponse(Call<LoTrinhResponse> call, Response<LoTrinhResponse> response) {
                             lotrinh = response.body().getLotrinh();
                             cacdiemdi.clear();
-                            cacdiemdi.add("Chon diem di");
+                            cacdiemdi.add("Chọn Điểm Đi");
                             for (Lo_Trinh l : response.body().getLotrinh()) {
                                 if (!cacdiemdi.contains(l.getDiemdi()))
                                     cacdiemdi.add(l.getDiemdi());
@@ -125,7 +124,7 @@ public class FragmentTimVe extends Fragment {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
                 cacdiemden.clear();
-                cacdiemden.add("Chon diem den");
+                cacdiemden.add("Chọn Điểm Đến");
                 currentDiemDi = i;
                 String diemdi = cacdiemdi.get(i);
                 //generate diem den
@@ -156,7 +155,7 @@ public class FragmentTimVe extends Fragment {
 
                 if(currentMaTuyenXe!=null){
                     cacngay.clear();
-                    cacngay.add("Chon ngay");
+                    cacngay.add("Chọn Ngày");
                     for(PhanCongResponse.PhanCong pc : phancong){
                         if(pc.getMatuyenxe().equals(currentMaTuyenXe)){
                             cacngay.add(pc.getNgaylamviec());
@@ -179,7 +178,7 @@ public class FragmentTimVe extends Fragment {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 ngayHienTai = cacngay.get(i);
                 cacgio.clear();
-                cacgio.add("Chon gio");
+                cacgio.add("Chọn Giở ");
                 adapter_cacgio.notifyDataSetChanged();
                 for(Lo_Trinh ll : lotrinh){
                     if(ll.getMatuyenxe().equals(currentMaTuyenXe)){
@@ -230,10 +229,12 @@ public class FragmentTimVe extends Fragment {
                 Utils.ngayDaChon = ngayHienTai;
                 startActivity(i);
             } else {
-                Toast.makeText(getActivity(), "Ban chua chon tuyen xe nao!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Bạn Chưa Chọn Đầy Đủ Thông Tin!", Toast.LENGTH_SHORT).show();
             }
         }else{
-            Toast.makeText(getActivity(), "Ban chua dang nhap!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Bạn Vui Lòng Đăng Nhập", Toast.LENGTH_SHORT).show();
+            Intent i =new Intent(getActivity(), DangNhapActivity.class);
+             startActivity(i);
         }
     }
 

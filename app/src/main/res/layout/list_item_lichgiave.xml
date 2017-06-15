@@ -59,7 +59,7 @@
                 android:id="@+id/tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Thuộc Tuyến:" />
+                android:text="@string/thuoctuyen" />
 
 
             <TextView
@@ -82,7 +82,7 @@
                 android:id="@+id/tv3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Số Trạm Dừng:" />
+                android:text="@string/sotramdung" />
 
 
             <TextView
@@ -144,7 +144,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingLeft="5dp"
-                    android:text="đồng/vé" />
+                    android:text="@string/dongtrenve" />
             </LinearLayout>
             <Button
                 android:id="@+id/btnMuaVE"
@@ -155,7 +155,7 @@
                 android:layout_weight="0.10"
                 android:background="@drawable/gbbt"
                 android:gravity="center"
-                android:text="Đặt Vé"
+                android:text="@string/datve"
                 android:textColor="#e22020"
                 android:textSize="10dp" />
         </LinearLayout>

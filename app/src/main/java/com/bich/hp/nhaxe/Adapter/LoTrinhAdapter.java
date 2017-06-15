@@ -15,9 +15,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by huylv on 11-Apr-17.
- */
+
 
 public class LoTrinhAdapter extends RecyclerView.Adapter<LoTrinhAdapter.LotrinhVH> {
 

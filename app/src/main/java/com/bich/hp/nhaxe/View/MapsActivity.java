@@ -71,11 +71,11 @@ public class MapsActivity extends  FragmentActivity implements OnMapReadyCallbac
         String origin = etOrigin.getText().toString();
         String destination = etDestination.getText().toString();
         if (origin.isEmpty()) {
-            Toast.makeText(this, "Please enter origin address!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Vui lòng nhập điểm đi!", Toast.LENGTH_SHORT).show();
             return;
         }
         if (destination.isEmpty()) {
-            Toast.makeText(this, "Please enter destination address!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Vui lòng nhập điểm đến!", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -91,8 +91,8 @@ public class MapsActivity extends  FragmentActivity implements OnMapReadyCallbac
 
 
     public void onDirectionFinderStart() {
-        progressDialog = ProgressDialog.show(this, "Please wait.",
-                "Finding direction..!", true);
+        progressDialog = ProgressDialog.show(this, "Vui lòng chờ..",
+                "Đang tìm..!", true);
 
         if (originMarkers != null) {
             for (Marker marker : originMarkers) {
@@ -163,10 +163,10 @@ public class MapsActivity extends  FragmentActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        LatLng hcmus = new LatLng(10.762963, 106.682394);
+        LatLng hcmus = new LatLng(10.031601, 105.768757);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(hcmus, 18));
         originMarkers.add(mMap.addMarker(new MarkerOptions()
-                .title("Khoa Học Tự Nhiên")
+                .title("Trường Đại học Cần Thơ")
                 .position(hcmus)));
         mMap.setMyLocationEnabled(true);
     }

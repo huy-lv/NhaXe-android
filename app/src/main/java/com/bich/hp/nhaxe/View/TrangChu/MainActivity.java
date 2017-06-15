@@ -146,16 +146,23 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 if (Utils.LOGGEDIN){
                     startActivity(new Intent(this, VeDaDatActivity.class));
                 }else{
-                    Utils.showInfoDialog(this,"Ban chua dang nhap!");
+                    Utils.showInfoDialog(this,"Bạn chưa đăng nhập");
                 }
+                break;
+
+
+            case R.id.itCaiDat:
+                Intent iCaiDat =new Intent(this,ChonNgonNgu.class);
+                startActivity(iCaiDat);
+
                 break;
 
             case R.id.itDangXuat:
 
-                Utils.showConfirmDialog(this, "Ban co chac chan muon dang xuat khong?", new DialogInterface.OnClickListener() {
+                Utils.showConfirmDialog(this, "Bạn có chắc chắn muốn đăng xuất?", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Utils.showInfoDialog(MainActivity.this,"Dang xuat thanh cong!");
+                        Utils.showInfoDialog(MainActivity.this,"Đăng xuất thành công");
                         modelDangNhap.dangXuat(MainActivity.this);
                         Utils.getClearCurrentUser();
                         Utils.LOGGEDIN = false;

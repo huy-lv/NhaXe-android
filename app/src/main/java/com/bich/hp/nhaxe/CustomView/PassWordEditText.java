@@ -17,9 +17,7 @@ import com.bich.hp.nhaxe.R;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-/**
- * Created by hp on 2/17/2017.
- */
+
 
 public class PassWordEditText extends EditText {
 

@@ -10,9 +10,7 @@ import android.support.v7.widget.Toolbar;
 import com.bich.hp.nhaxe.Adapter.ViewpageradapterDangNhap;
 import com.bich.hp.nhaxe.R;
 
-/**
- * Created by hp on 2/17/2017.
- */
+
 
 public class DangNhapActivity extends AppCompatActivity {
     TabLayout tabLayout;

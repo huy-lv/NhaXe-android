@@ -14,9 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-/**
- * Created by hp on 2/26/2017.
- */
+
 
 public class ModelDangKy {
     public Boolean DangKyThanhVien(KhachHang khachHang){

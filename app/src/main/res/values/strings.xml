@@ -1,5 +1,99 @@
 <resources>
     <string name="app_name">NhaXe</string>
+
+    //chonghe
+    <string name="ghetrong">Ghế Trống</string>
+    <string name="dadat">Đã Đặt</string>
+    <string name="dachon">Đã Chọn</string>
+    <string name="tieptuc">TIẾP TỤC</string>
+
+   //diem_di_den
+    <string name="hindtimdiemdi">Tìm Điểm Đi...</string>
+
+    //dong goi hang hoa
+    <string name="huongdancachdonggoihang">HƯỚNG DẪN CÁCH ĐÓNG GÓI HÀNG HÓA</string>
+    <string name="tieuchuanchung">1.Tiêu Chuẩn Chung:</string>
+    <string name="goibocchatdacbiet">2.Gói Bọc Một Số Chất Đặc Biệt:</string>
+
+    //gioithieufunbus
+    <string name="chatluongtaothanhcong">CHẤT LƯỢNG TẠO THÀNH CÔNG</string>
+    <string name="gioithieu">  Giới Thiệu</string>
+    <string name="tamnhin">  Tầm Nhìn</string>
+    <string name="muctieu">  Mục Tiêu</string>
+
+   //main
+    <string name="timduongdi">Tìm Đường Đi...</string>
+
+
+    //maps
+    <string name="nhapdiemdi">Nhập điểm đi</string>
+    <string name="nhapdiemden">Nhập điểm đến</string>
+    <string name="timduong">Tìm đường</string>
+    //nhapthongtin
+    <string name="chapnhandieukhoan">Chúng tôi đã hiểu rõ các điều khoản bảo mật của Nhà Xe</string>
+    <string name="hindemail">Địa chỉ email</string>
+    <string name="sdtlienhe">Số điện thoại liên hệ</string>
+
+    <string name="tenkhachdatve">Tên khách đặt vé</string>
+    <string name="xemthongtindatve">Xem thông tin hành khách đặt vé</string>
+    <string name="thongtindatve">THÔNG TIN KHÁCH ĐẶT VÉ</string>
+
+    //vedadat
+    <string name="banhienco">Bạn hiện có </string>
+    <string name="ve"> vé </string>
+
+    //customdanhsachlotrinh
+    <string name="diemdi">Điểm Đi</string>
+    <string name="diemden">Điểm Đến</string>
+    <string name="tentuyen"> Tên Tuyến :</string>
+    <string name="sotramdung"> Số Trạm Dừng :</string>
+    <string name="ngay">Ngày :</string>
+    <string name="giokhoihanh"> Giờ Khởi Hành :</string>
+    <string name="dongtrenve">đồng/vé</string>
+    <string name="tienhanhdatve">Tiến Hành Đặt Vé</string>
+    //chonghe
+    <string name="nhaptenhanhkhach">Nhập Tên Hành Khách</string>
+    <string name="huy">Hủy Bỏ</string>
+    <string name="dongy">Đồng Ý</string>
+
+    //xacnhan
+    <string name="thanhtoantaiquay">Thanh Toán Tại Quầy</string>
+    <string name="thanhtoanquapaypal">Thanh Toán Qua PayPal</string>
+    <string name="cacvedachon">Các Vé Đã Chọn:</string>
+    <string name="thoigian">Thời Gian:</string>
+    <string name="lotrinh">Lộ Trình :</string>
+    <string name="email">Email:</string>
+    <string name="sdt">Số Điện Thoại:</string>
+    <string name="hotenkh">Họ Tên Khách Đặt:</string>
+    <string name="thongtindv">THÔNG TIN HÓA ĐƠN VÉ XE</string>
+
+    //item ghe
+    <string name="tenghe">Tên Ghế : </string>
+    //ghe da chon
+    <string name="ten">Tên :</string>
+    <string name="ghe">Ghế :</string>
+    //ve xe
+    <string name="mave">Mã Vé :</string>
+    <string name="maghe">Mã Ghế :</string>
+    <string name="tenkh">Tên Khách Hàng :</string>
+    <string name="giave">Giá Vé :</string>
+    <string name="huyve">Hủy Vé</string>
+    <string name="cdtccm">Cần điền tất cả các mục</string>
+    <string name="tenhienthi">Tên Hiển Thị</string>
+    <string name="diachiemail">Địa chỉ email</string>
+    <string name="matkhau">Mật khẩu</string>
+    <string name="nlmk">Nhập lại mật khẩu</string>
+    <string name="dangky">Đăng Ký</string>
+    <string name="dangnhap">ĐĂNG NHẬP</string>
+    <string name="quenmk">Quên mật khẩu?</string>
+    <string name="nhapsdt">Nhập số điện thoại</string>
+    <string name="goitaxi">Gọi Taxi: 1900 81 92</string>
+    <string name="ngaydi">Ngày Đi :</string>
+ <string name="datve">ĐẶT VÉ</string>
+ <string name="thuoctuyen">Thuộc Tuyến :</string>
+   <string name="cdgh">        Cách Đóng Gói Hàng</string>
+  <string name="bbg">Bảng Báo Giá</string>
+ <string name="goivanchuyen"> Gọi Vận Chuyển: 19008193</string>
     <string name="facebook_app_id">1999628940264616</string>
     <string name="please_select_end_point">Vui lòng chọn điểm đến</string>
     <string name="hint_select_end_date">chọn ngày về</string>
@@ -10,6 +104,6 @@
     <string name="please_select_start_point">Vui lòng chọn điểm đi</string>
     <string name="google_plus_client">981475903759-u06092se7a21cpucok6cqif4d7tl61ta.apps.googleusercontent.com</string>
     <string name="title_activity_maps">Map</string>
-    <string name="previous">Previous</string>
-    <string name="next">Next</string>
+    <string name="previous">Quay Lại</string>
+    <string name="next">Tiếp </string>
 </resources>

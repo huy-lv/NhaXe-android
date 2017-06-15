@@ -1,136 +1,113 @@
 package com.bich.hp.nhaxe.View.TrangChu.fragment;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.bich.hp.nhaxe.Adapter.CustomAdapter;
-import com.bich.hp.nhaxe.Model.ObjectClass.TinTuc;
-import com.bich.hp.nhaxe.Model.TinTuc.XMLDOMParser;
+
+import com.bich.hp.nhaxe.Adapter.NewsAdapter;
+import com.bich.hp.nhaxe.Model.ObjectClass.NewsModel;
+
 import com.bich.hp.nhaxe.R;
-import com.bich.hp.nhaxe.View.WebView.WebViewTinTuc;
+import com.bich.hp.nhaxe.View.TrangChu.NewsDetailActivity;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
+
 import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 
-
-
-/**
- * Created by hp on 2/14/2017.
- */
 
 public class FragmentTinTuc extends Fragment {
- ListView listView;
-    CustomAdapter customAdapter;
-    ArrayList<TinTuc> mangtintuc;
+   private   ListView lvNews;
+   private NewsAdapter adapter;
+    private final  String vnexpressRSS="http://vnexpress.net/rss/oto-xe-may.rss";
 
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout_tintuc, container, false);
-        listView=(ListView)view.findViewById(R.id.listview);
-        mangtintuc= new ArrayList<TinTuc>();
-        getActivity(). runOnUiThread(new Runnable(){
+        lvNews=(ListView)view.findViewById(R.id.lvNews);
 
-            @Override
-            public void run() {
-               new Readdata().execute("http://vnexpress.net/rss/the-gioi.rss");
-            }
-        });
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent it =new Intent(getContext(), WebViewTinTuc.class);
-                it.putExtra("link",mangtintuc.get(position).link);
-                startActivity(it);
-            }
+        lvNews.setOnItemClickListener(onItemClick);
+         new LoadRSS().execute(vnexpressRSS);
 
 
-
-
-        });
         return view;
 
     }
-
-        public class Readdata extends AsyncTask<String, Integer, String> {
-
+    private AdapterView.OnItemClickListener onItemClick=new AdapterView.OnItemClickListener() {
         @Override
-        protected String doInBackground(String... params) {
-            return docNoiDung_Tu_URL(params[0]);
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            Intent detail=new Intent(getActivity(), NewsDetailActivity.class);
+            detail.putExtra("LINK",adapter.getItem(position).getLink());
+            startActivity(detail);
         }
 
-        @Override
-        protected void onPostExecute(String s) {
 
-            XMLDOMParser parser=new XMLDOMParser();
-            Document document=parser.getDocument(s);
-            NodeList   nodeList=document.getElementsByTagName("item");
-            NodeList    nodeListdesreption=document.getElementsByTagName("description");
-            String hinhanh="";
-            String title="";
-            String link="";
-            for(int i=0;i<nodeList.getLength();i++){
-                String cdata=nodeListdesreption.item(i+1).getTextContent();
-                Pattern p=Pattern.compile("<img[^>]+src\\s*=\\s*['\"]([^'\"]+)['\"][^>]*>");
-                Matcher matcher=p.matcher(cdata);
-                if(matcher.find()){
-                    hinhanh=matcher.group(1);
-                }
-                Element element=(Element)nodeList.item(i);
+    };
+     class  LoadRSS extends AsyncTask<String,Void,ArrayList<NewsModel>>{
+         ProgressDialog dialog;
 
-                title+=parser.getValue(element,"title");
-                link=parser.getValue(element,"link");
-                mangtintuc.add(new TinTuc(title,link,hinhanh));
-            }
-            customAdapter=new CustomAdapter(getActivity(),android.R.layout.simple_list_item_1,mangtintuc);
-            listView.setAdapter(customAdapter);
-            super.onPostExecute(s);
-        }
+         @Override
+         protected void onPreExecute() {
+             dialog=new ProgressDialog(getActivity());
+             dialog.setMessage("Loading...!");
+             dialog.setCancelable(false);
+             dialog.show();
+         }
 
-        private String docNoiDung_Tu_URL(String theUrl) {
-            StringBuilder content = new StringBuilder();
+         @Override
+         protected ArrayList<NewsModel> doInBackground(String... params) {
+             String url=params[0];
+             ArrayList<NewsModel>result= new ArrayList<>();
+             try {
+                 Document doc= Jsoup.connect(url).get();
+                 Elements elements = doc.select("item");
+                 for (Element item :elements){
+                 String title=item.select("title").text();
+                     String link=item.select("link").text();
+                     String description=item.select("description").text();
 
-            try {
-                // create a url object
-                URL url = new URL(theUrl);
+                     Document docImage=Jsoup.parse(description);
+                   String imageURL=  docImage.select("img").get(0).attr("src");
+                     result.add(new NewsModel(title,link,imageURL));
+                 }
+             } catch (IOException e) {
+                 e.printStackTrace();
+             }
+             return result;
+         }
 
-                // create a urlconnection object
-                URLConnection urlConnection = url.openConnection();
+         @Override
+         protected void onPostExecute(ArrayList<NewsModel> newsModels) {
+             dialog.dismiss();
+             adapter=new NewsAdapter(getContext(),0,newsModels,LayoutInflater.from(getActivity()));
+             lvNews.setAdapter(adapter);
+         }
 
-                // wrap the urlconnection in a bufferedreader
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
 
-                String line;
 
-                // read from the urlconnection via the bufferedreader
-                while ((line = bufferedReader.readLine()) != null) {
-                    content.append(line + "\n");
-                }
-                bufferedReader.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return content.toString();
-        }
 
-    }
+     }
+
+
+
+
 }

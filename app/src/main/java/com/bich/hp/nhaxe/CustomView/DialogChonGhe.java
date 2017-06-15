@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.bich.hp.nhaxe.R;
+import com.bich.hp.nhaxe.Utils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -61,7 +62,8 @@ public class DialogChonGhe extends Dialog {
 
         if (ten != null)
             if (!ten.equals("NULL"))
-                dialog_chonghe_ten.setText(ten);
+                dialog_chonghe_ten.setText(Utils.getCurrentUser().getName());
+             //   dialog_chonghe_ten.setText(ten);
     }
 
     @OnClick(R.id.dialog_chonghe_ok)

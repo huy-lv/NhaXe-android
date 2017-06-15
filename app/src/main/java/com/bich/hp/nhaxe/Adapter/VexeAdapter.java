@@ -17,9 +17,6 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by huylv on 14-Apr-17.
- */
 
 public class VexeAdapter extends RecyclerView.Adapter<VexeAdapter.VexeVH> {
     Context c;

@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:text="HƯỚNG DẪN CÁCH ĐÓNG GÓI HÀNG HÓA"
+                android:text="@string/huongdancachdonggoihang"
                 android:textColor="#f70505"
                 android:textStyle="bold" />
             <TextView
@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="1.Tiêu Chuẩn Chung:"
+                android:text="@string/tieuchuanchung"
                 android:textColor="#f11010"
                 android:textStyle="bold" />
             <TextView
@@ -61,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="2.Gói Bọc Một Số Chất Đặc Biệt:"
+                android:text="@string/goibocchatdacbiet"
                 android:textColor="#f11010"
                 android:textStyle="bold" />
             <TextView

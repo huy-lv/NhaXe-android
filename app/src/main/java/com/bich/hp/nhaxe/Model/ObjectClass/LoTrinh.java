@@ -1,8 +1,5 @@
 package com.bich.hp.nhaxe.Model.ObjectClass;
 
-/**
- * Created by hp on 4/9/2017.
- */
 
 public class LoTrinh {
     String TENLOTRINH;

@@ -32,9 +32,7 @@ import java.util.List;
 
 import static com.bich.hp.nhaxe.View.TrangChu.MainActivity.SERVER_NAME;
 
-/**
- * Created by hp on 2/14/2017.
- */
+
 
 public class FragmentLichTrinhGiaVe extends Fragment   {
     public static final int READ_TIMEOUT = 15000;

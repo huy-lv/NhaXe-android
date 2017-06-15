@@ -15,9 +15,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by huylv on 13-Apr-17.
- */
+
 
 public class AdapterGheDaChon extends RecyclerView.Adapter<AdapterGheDaChon.GheDaChonVH> {
     Context context;

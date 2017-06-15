@@ -21,9 +21,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-/**
- * Created by huylv on 12-Apr-17.
- */
+
 
 public class NhapThongTinActivity extends AppCompatActivity {
     @BindView(R.id.toolbar)
@@ -65,13 +63,13 @@ public class NhapThongTinActivity extends AppCompatActivity {
         String name = edTenKHDV.getText().toString();
         String sdt = edsdt.getText().toString();
         if (!validateEmail(email)) {
-            inputEdDiaChiEmailDK.setError("Email khong hop le!");
+            inputEdDiaChiEmailDK.setError("Email không hợp lệ!");
         } else if (name.length()<7) {
-            inputEdTenKHDV.setError("Ten khong hop le!");
+            inputEdTenKHDV.setError("Tên không hợp lệ!");
         } else if(sdt.length()<10 ){
-            inputEdsdt.setError("So dien thoai khong hop le!");
+            inputEdsdt.setError("Số điện thoại không hợp lệ!");
         }else if(!checkBox.isChecked()){
-            Toast.makeText(this,"Ban phai chap nhan chinh sach bao mat!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Bạn phải chấp nhận chính sách của nhà xe!",Toast.LENGTH_SHORT).show();
         }else{
             //done
             new DialogXacnhan(this).show();

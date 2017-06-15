@@ -16,9 +16,7 @@ import butterknife.OnClick;
 import static com.bich.hp.nhaxe.Utils.loTrinhDaChon;
 import static com.bich.hp.nhaxe.Utils.ngayDaChon;
 
-/**
- * Created by huylv on 11-Apr-17.
- */
+
 
 public class TimVeActivity extends AppCompatActivity {
     @BindView(R.id.tvDiemDi1)    TextView tvDiemDi1;

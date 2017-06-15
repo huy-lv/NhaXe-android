@@ -16,9 +16,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.gson.Gson;
 
-/**
- * Created by hp on 2/18/2017.
- */
+
 
 public class ModelDangNhap {
     AccessToken accessToken;

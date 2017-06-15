@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import com.bich.hp.nhaxe.R;
 
-/**
- * Created by hp on 2/14/2017.
- */
 
 public class VeFunBus extends Fragment {
     TextView tvGT,tvMT,tvSM;
